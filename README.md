@@ -28,7 +28,7 @@ This document describes the frontend application for the Cafe Management System,
     ```bash
     npm install
     ```
-3. Ensure the backend project (`cafe-backend`) is running on a separate terminal.
+3. Ensure the backend project [cafe-backend](https://github.com/dunglq3110/cafe-backend/) is running on a separate terminal.
 4. Start the frontend development server:
     ```bash
     npm run start
