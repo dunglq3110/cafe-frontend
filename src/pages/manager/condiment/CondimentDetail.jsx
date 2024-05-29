@@ -3,8 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import condimentService from '../../../services/condiment.service';
 import productService from "../../../services/product.service";
-import { toast } from 'react-toastify';
-import { ToastContainer } from 'react-toastify';
+
 
 const CondimentDetail = () => {
     const navigate = useNavigate();

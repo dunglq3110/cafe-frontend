@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { CSSTransition } from 'react-transition-group';
 import { Link } from 'react-router-dom';
 
 
@@ -83,7 +82,7 @@ const NavBar = () => {
                     </Link>
                     <Link to="/manager/staffs" className="nav-link">
                         <div className={`side-button text-custom ${activeLink === 'staffs' ? 'active' : ''}`} onClick={() => setActiveLink('staffs')} style={{ justifyContent: isVisible ? '' : 'center', alignItems: isVisible ? '' : 'center', display: isVisible ? '' : 'flex' }}>
-                            <div className="material-symbols-outlined center-layout">   
+                            <div className="material-symbols-outlined center-layout">
                                 group
                             </div>
                             <p className="m-0 px-2 center-layout" style={{ display: isVisible ? '' : 'none' }}>Employee</p>

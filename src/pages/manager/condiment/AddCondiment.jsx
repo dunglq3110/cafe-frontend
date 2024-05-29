@@ -1,4 +1,3 @@
-import ech from '../../../assets/images/ech.jpg';
 import { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';

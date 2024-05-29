@@ -1,8 +1,6 @@
-import ech from '../../../assets/images/ech.jpg';
 
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import StaffService from '../../../services/staff.service'
 import customerService from '../../../services/customer.service';
 
 
@@ -57,7 +55,7 @@ const CustomerDetail = () => {
                                 </div>
                                 <div className="col-4">
                                     <label for="inputAddress" className="form-label fw-bold">Birthday</label>
-                                    <input type="" className="form-control" id="inputBirthday" defaultValue={new Date(customer.dateOfBirth).toLocaleDateString()}/>
+                                    <input type="" className="form-control" id="inputBirthday" defaultValue={new Date(customer.dateOfBirth).toLocaleDateString()} />
                                 </div>
                                 <div className="col-md-3 mt-2">
                                     <label for="inputState" className="form-label fw-bold">Gentle</label>

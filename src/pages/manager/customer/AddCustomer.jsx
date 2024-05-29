@@ -1,14 +1,10 @@
-import ech from '../../../assets/images/ech.jpg';
-import { useState, useEffect, useRef } from 'react';
-import StaffService from '../../../services/staff.service'
 
-import { useParams } from 'react-router-dom';
-import useFetchObject from '../../../hooks/useFetchObject';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import CustomerService from '../../../services/customer.service';
+import { useRef } from 'react';
 
 
 const AddCustomer = () => {

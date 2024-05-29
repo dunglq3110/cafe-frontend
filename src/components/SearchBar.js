@@ -1,12 +1,9 @@
 import shopping from '../assets/images/shopping-cart.png'
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import add from '../assets/images/add.png'
-import Order from '../pages/manager/order/Order';
 
 
-
-const SearchBar = ({ receipt, newOrder,onSearch }) => {
+const SearchBar = ({ receipt, newOrder, onSearch }) => {
     const [inputValue, setInputValue] = useState(null);
 
     const handleInputChange = async (event) => {

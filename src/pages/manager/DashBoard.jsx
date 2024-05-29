@@ -37,13 +37,28 @@ const Dashboard = () => {
     }
 
 
+    const colors = [
+        '#fee327',
+        '#fdca54',
+        '#f6a570',
+        '#f1969b',
+        '#f08ab1',
+        '#c78dbd',
+        '#927db6',
+        '#5da0d7',
+        '#00b3e1',
+        '#50bcbf',
+        '#65bda5',
+        '#87bf54'
+    ];
+
     const [chartData, setChartData] = useState({
         labels: [],
         datasets: [
             {
                 label: '',
-                backgroundColor: 'rgba(194, 116, 161, 0.5)',
-                borderColor: 'rgb(194, 116, 161)',
+                backgroundColor: [],
+                borderColor: [],
                 data: [],
             },
         ],
@@ -53,21 +68,23 @@ const Dashboard = () => {
         if (selectedReportCategory === "revenue" && selectedView === "chart") {
             const labels = responseData.map(item => item.label);
             const data = responseData.map(item => item[selectedRevenueCategory]);
+            const backgroundColors = colors.slice(0, responseData.length);
+            const borderColors = colors.slice(0, responseData.length);
 
             setChartData({
                 labels: labels,
                 datasets: [
                     {
                         label: selectedRevenueCategory,
-                        backgroundColor: '#8c4231',
-                        borderColor: '#361612',
+                        backgroundColor: backgroundColors,
+                        borderColor: borderColors,
                         data: data,
                     },
                 ],
-
             });
         }
     }, [responseData, selectedRevenueCategory, selectedReportCategory, selectedView]);
+
 
 
 

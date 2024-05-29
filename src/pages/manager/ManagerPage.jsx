@@ -51,19 +51,21 @@ import UnauthPage from '../../components/404page/UnauthPage';
 
 const ManagerPage = () => {
     const navigate = useNavigate();
-    const [isManager, setIsManager] = useState(false);
+    const [isManager, setIsManager] = useState(true);
 
     useEffect(() => {
         const user = JSON.parse(localStorage.getItem('user'));
 
         if (!user || !user.result.token) {
-            console.log("No user or token found in local storage.");
+            console.log("No user or token found in local storage.")
+            setIsManager(false);
             return;
         }
 
         authService.introspect(user.result.token).then((data) => {
             if (!data.result.valid) {
                 console.log("Token is not valid.");
+                setIsManager(false);
                 return;
             }
 
@@ -72,6 +74,7 @@ const ManagerPage = () => {
 
             if (userRole !== 'MANAGER') {
                 console.log("User is not a manager.");
+                setIsManager(false);
                 return;
             }
 
